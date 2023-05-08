@@ -1,0 +1,98 @@
+import 'package:flutter/material.dart';
+import 'package:tab_cash/core/utils/constants.dart';
+import 'package:tab_cash/features/authentication/presentation/widgets/login/switch_login_screen.dart';
+import 'package:tab_cash/features/authentication/presentation/widgets/register/register_first_screen.dart';
+import 'package:tab_cash/shared/components/components.dart';
+
+class HomeAuthenticationScreen extends StatelessWidget {
+  const HomeAuthenticationScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      backgroundColor: Colors.white,
+    body: SafeArea(
+      child: Column(
+        children: [
+          Stack(
+           alignment: AlignmentDirectional.bottomEnd,
+            children: [
+              Image.asset(
+                'assets/images/login.jpg',
+              ),
+              Container(
+                width: double.infinity,
+                height: size.height * .146,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 16,
+                    ),
+                    tabCashText(),
+                    Text(
+                      'Smart Wallet',
+                      style: TextStyle(
+                        letterSpacing: 4.3,
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFFF26C0C),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              right: 20.0,
+              left: 20.0,
+            ),
+            child: Text(
+                'Take control of your expenses and empower your children',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          defaultButton(
+            function: ()
+            {
+              navigateTo(context, SwitchLoginScreen());
+            },
+            text: 'Login',
+            textColor: Colors.white,
+            color: Color(0xFF263699),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          defaultButton(
+            function: ()
+            {
+              navigateTo(context, RegisterFirstScreen());
+            },
+            text: 'Sign up',
+            textColor: kDefaultButtonColor,
+            color: Colors.white,
+          ),
+
+        ],
+      ),
+    ),
+    );
+  }
+}
