@@ -1,0 +1,14 @@
+footer{
+  background: #263699;
+}
+
+td{
+  padding-right: 20px;
+}
+
+td img{
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  margin-top: 10px;
+}

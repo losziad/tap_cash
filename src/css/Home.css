@@ -1,0 +1,26 @@
+main{
+  height: calc(100vh - 60px);
+  background-color: #fff3e5;
+}
+
+.home > img{
+  width: 500px;
+  height: 500px;
+}
+
+.home > div{
+  max-width: 50%;
+}
+
+.explore:nth-child(2){
+  max-width: 50%;
+}
+
+.icons > div{
+  width: 350px;
+  border-bottom: 5px solid #ff6501;
+}
+
+.features div img{
+  height: 350px;
+}
