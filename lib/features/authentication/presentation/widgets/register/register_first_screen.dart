@@ -235,7 +235,7 @@ class RegisterFirstScreen extends StatelessWidget {
                                 Row(
                                   children: [
                                     Text(
-                                      'Your legal user name',
+                                      'Your user name',
                                     ),
                                   ],
                                 ),

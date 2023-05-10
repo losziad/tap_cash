@@ -8,7 +8,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          'Profile Screen'
+          'Profile',
         ),
       ),
     );

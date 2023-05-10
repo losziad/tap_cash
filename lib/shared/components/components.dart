@@ -195,18 +195,15 @@ Widget defaultTextFormField({
       obscureText: isPassword,
     );
 
-
-enum ToastStates
-{
+enum ToastStates {
   SUCCESS,
   ERROR,
   WARNING,
 }
-Color chooseToastColor(ToastStates state)
-{
+
+Color chooseToastColor(ToastStates state) {
   Color? color;
-  switch(state)
-  {
+  switch (state) {
     case ToastStates.SUCCESS:
       color = Colors.green;
       break;
@@ -220,31 +217,46 @@ Color chooseToastColor(ToastStates state)
   return color;
 }
 
-
 void showToast({
   required String text,
   required Color color,
   //required ToastStates state,
-}) =>  Fluttertoast.showToast(
-  msg: text,
-  toastLength: Toast.LENGTH_LONG,
-  gravity: ToastGravity.BOTTOM,
-  timeInSecForIosWeb: 5,
- // backgroundColor: chooseToastColor(state),
-  textColor: Colors.white,
-  fontSize: 16.0,
-);
+}) =>
+    Fluttertoast.showToast(
+      msg: text,
+      toastLength: Toast.LENGTH_LONG,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 5,
+      // backgroundColor: chooseToastColor(state),
+      textColor: Colors.white,
+      fontSize: 16.0,
+    );
 
 void navigateToAndReplace(context, widget) {
   Navigator.pushAndRemoveUntil(
     context,
     MaterialPageRoute(builder: (context) => widget),
-        (route) {
+    (route) {
       return false;
     },
   );
 }
 
+AppBar sharedAppBar({
+  required String text,
+}) =>
+    AppBar(
+      elevation: 0.0,
+      backgroundColor: Color(0xFF414EA3),
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(
+            text,
+          ),
+        ],
+      ),
+    );
 
 // void showProgressIndicator(BuildContext context) {
 //   AlertDialog alertDialog = AlertDialog(

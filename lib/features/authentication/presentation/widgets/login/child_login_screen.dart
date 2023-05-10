@@ -18,7 +18,7 @@ class ChildLoginScreen extends StatelessWidget {
     return BlocConsumer<LoginCubit, LoginStates>(
       listener: (context, state) {
         if (state is SuccessLoginState && state.userModel.status == true) {
-          navigateToAndReplace(context, const HomePageScreen());
+          navigateToAndReplace(context,  HomePageScreen());
 
         } else if (state is SuccessLoginState &&
             state.userModel.status == false) {

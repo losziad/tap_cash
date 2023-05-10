@@ -36,18 +36,24 @@ class HomeLayoutScreen extends StatelessWidget {
             elevation: 0.0,
             backgroundColor: Colors.white,
             items: [
+
               BottomNavigationBarItem(
-                  icon: SvgPicture.asset("assets/images/profie.svg"),
+                icon: SvgPicture.asset(
+                  "assets/images/home-3.svg",
+                ),
+                label: "home",
+                activeIcon: SvgPicture.asset(
+                  "assets/images/home-3.svg",
+                  color: Colors.blue,
+                ),
+              ),
+              BottomNavigationBarItem(
+                  icon: SvgPicture.asset(
+                    "assets/images/profie.svg",
+                  ),
                   label: "Profile",
                   activeIcon: SvgPicture.asset(
                     "assets/images/profie.svg",
-                    color: Colors.blue,
-                  )),
-              BottomNavigationBarItem(
-                  icon: SvgPicture.asset("assets/images/home-3.svg"),
-                  label: "home",
-                  activeIcon: SvgPicture.asset(
-                    "assets/images/home-3.svg",
                     color: Colors.blue,
                   )),
             ],

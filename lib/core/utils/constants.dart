@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tab_cash/features/authentication/data/models/user_getter_model.dart';
+import 'package:tab_cash/features/smart_credit_visa/data/models/credit_card_model.dart';
 
 const kAppBarSignUp = TextStyle(
   color: Colors.black,
@@ -45,8 +46,10 @@ const kHomePageScreenBackGroundColor = BoxDecoration(
   ),
 );
 
+
 //FOR CUBIT
 String? userId;
+String? userCardNumber;
 String? token;
 UserGetterModel? user;
 
@@ -65,6 +68,10 @@ const kDescriptionTapCashPrivacyColor = Color(0xFF0B83D9);
 
 const kChildLoginScreenColor = Color(0xFFF26C0C);
 
+const kServiceDefaultColor = Color(0xFF98A1B3);
+
+const kServiceEducationColor = Color(0xFF666E80);
+
 
 
 const kTitleStyle = TextStyle(
@@ -75,6 +82,20 @@ const kTitleStyleSmall = TextStyle(
   fontSize: 12.0,
 );
 
+const kTitleStyleDrawerTextHeader = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 16.0
+);
+
+const kTitleStyleDrawerText = TextStyle(
+    fontSize: 16.0
+);
+
+const kFontSizeDrawer = TextStyle(
+  fontSize: 16.0,
+);
+
+
 final kDecoration = BoxDecoration(
   borderRadius:  BorderRadius.circular(10.0,),
   color: Colors.white,
@@ -83,6 +104,17 @@ final kDecoration = BoxDecoration(
       color: Colors.grey,
       offset: Offset(0.0,1.0),
       blurRadius: 10.0,
+    ),
+  ],
+);
+
+final kDecorationServices = BoxDecoration(
+  borderRadius: BorderRadius.circular(10),
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey,
+      blurStyle: BlurStyle.outer,
+      blurRadius: 4,
     ),
   ],
 );
@@ -114,4 +146,9 @@ const kStyleAppBar = TextStyle(
   fontSize: 22.0,
   fontWeight: FontWeight.w400,
 );
+
+//This String to Cache Helper
+String? uId = '';
+
+
 

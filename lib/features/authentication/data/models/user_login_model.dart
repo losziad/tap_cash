@@ -16,8 +16,6 @@ class UserLoginModel{
     );
   }
 
-
-
 }
 
 // class UserLoginModel{

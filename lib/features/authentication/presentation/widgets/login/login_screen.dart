@@ -5,6 +5,7 @@ import 'package:tab_cash/core/utils/constants.dart';
 import 'package:tab_cash/features/authentication/presentation/manger/login_cubit/login_cubit.dart';
 import 'package:tab_cash/features/authentication/presentation/manger/login_cubit/login_states.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_first_screen.dart';
+import 'package:tab_cash/features/button_navigation_bar/presentation/widgets/button_naigation_bar.dart';
 import 'package:tab_cash/features/home_page_screen/home_page_screen.dart';
 import 'package:tab_cash/shared/components/components.dart';
 
@@ -19,7 +20,7 @@ class LoginScreen extends StatelessWidget {
     return BlocConsumer<LoginCubit, LoginStates>(
       listener: (context, state) {
         if (state is SuccessLoginState && state.userModel.status == true) {
-          navigateToAndReplace(context, HomePageScreen());
+          navigateToAndReplace(context, HomeLayoutScreen());
 
         } else if (state is SuccessLoginState &&
             state.userModel.status == false) {
