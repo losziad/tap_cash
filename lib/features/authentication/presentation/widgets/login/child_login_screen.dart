@@ -81,7 +81,7 @@ class ChildLoginScreen extends StatelessWidget {
                                   ),
                                   child: Row(
                                     children: [
-                                      Text(
+                                      const Text(
                                         "Hi 👋 let's log in",
                                         style: TextStyle(
                                           fontSize: 24.0,
@@ -100,7 +100,7 @@ class ChildLoginScreen extends StatelessWidget {
                                   ),
                                   child: Row(
                                     children: [
-                                      Text(
+                                      const Text(
                                         "Ask your parent or guardian for your login details.",
                                         style: TextStyle(
                                           fontSize: 14.0,
@@ -111,7 +111,7 @@ class ChildLoginScreen extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10.0,
                                 ),
                                 Padding(
@@ -120,7 +120,7 @@ class ChildLoginScreen extends StatelessWidget {
                                     children: [
                                       InkWell(
                                         onTap: () {},
-                                        child: Text(
+                                        child: const Text(
                                           "How do I get my login details?",
                                           style: TextStyle(
                                             fontSize: 14.0,
@@ -147,9 +147,10 @@ class ChildLoginScreen extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: Text(
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        child:
+                        Text(
                           "Email Address",
                           style: TextStyle(
                             fontSize: 14,
@@ -157,7 +158,7 @@ class ChildLoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6.0,
                       ),
                       Padding(
@@ -178,8 +179,8 @@ class ChildLoginScreen extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
                         child: Text(
                           "Password",
                           style: TextStyle(
@@ -188,7 +189,7 @@ class ChildLoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6.0,
                       ),
                       Padding(

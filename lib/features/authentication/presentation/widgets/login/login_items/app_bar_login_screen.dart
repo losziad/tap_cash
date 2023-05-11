@@ -8,7 +8,7 @@ AppBar appBarLoginScreen(BuildContext context) {
     elevation: 0.0,
     backgroundColor: Colors.white,
     leading: IconButtonHomeScreen(context),
-    title: Text(
+    title: const Text(
       'Login',
       style: kAppBarSignUp,
     ),

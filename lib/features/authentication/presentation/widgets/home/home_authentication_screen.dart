@@ -24,7 +24,7 @@ class HomeAuthenticationScreen extends StatelessWidget {
               Container(
                 width: double.infinity,
                 height: size.height * .146,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30.0),
@@ -33,17 +33,17 @@ class HomeAuthenticationScreen extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     tabCashText(),
-                    Text(
+                    const Text(
                       'Smart Wallet',
                       style: TextStyle(
                         letterSpacing: 4.3,
                         fontSize: 15.0,
                         fontWeight: FontWeight.w600,
-                        color: Color(0xFFF26C0C),
+                        color:kChildLoginScreenColor,
                       ),
                     ),
                   ],
@@ -51,8 +51,8 @@ class HomeAuthenticationScreen extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(
+          const Padding(
+            padding: EdgeInsets.only(
               right: 20.0,
               left: 20.0,
             ),
@@ -65,25 +65,25 @@ class HomeAuthenticationScreen extends StatelessWidget {
                 ),
               ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           defaultButton(
             function: ()
             {
-              navigateTo(context, SwitchLoginScreen());
+              navigateTo(context, const SwitchLoginScreen());
             },
             text: 'Login',
             textColor: Colors.white,
-            color: Color(0xFF263699),
+            color: kDefaultButtonColor,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           defaultButton(
             function: ()
             {
-              navigateTo(context, RegisterFirstScreen());
+              navigateTo(context, const RegisterFirstScreen());
             },
             text: 'Sign up',
             textColor: kDefaultButtonColor,

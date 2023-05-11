@@ -16,11 +16,11 @@ class RegisterFifthScreen extends StatelessWidget {
       appBar: appBarSignUpScreen(context),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           tapCashItemsAppBar(),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           LinearStepIndicator(
@@ -33,41 +33,41 @@ class RegisterFifthScreen extends StatelessWidget {
               return Future.value(true);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           myDivider(),
-          SizedBox(
+          const SizedBox(
             height: 15.0,
           ),
           Image.asset('assets/images/lastScreen.png',
             height: 300.0,
             width: 400.0,
           ),
-          SizedBox(
+          const SizedBox(
             height: 25.0,
           ),
-          Text(
+          const Text(
             'Congratulations!!',
             style: kTextStyleHeader,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
-          Text(
+          const Text(
             '  Your registration has been \ncompleted successfully. You \n        can now access your \n                  account.',
             style: TextStyle(
               fontSize: 16.0,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30.0,
           ),
           defaultButton(
             text: 'Login Now',
             function: ()
             {
-              navigateTo(context, SwitchLoginScreen(),);
+              navigateTo(context, const SwitchLoginScreen(),);
             },
             color: kDefaultButtonColor,
             textColor: Colors.white,

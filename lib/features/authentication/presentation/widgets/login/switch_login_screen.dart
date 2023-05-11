@@ -25,18 +25,20 @@ class SwitchLoginScreen extends StatelessWidget {
                   InkWell(
                       onTap: () {},
                       child: SvgPicture.asset("assets/images/Arrow Right.svg")),
-                  Spacer(),
-                  Text(
+                  const Spacer(),
+
+
+                  const Text(
                     "Login",
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 24,
                   ),
-                  Spacer(),
+                  const Spacer(),
                 ],
               ),
             ),
@@ -46,7 +48,7 @@ class SwitchLoginScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: myDivider(),
             ), // divider
-            Text(
+            const Text(
               "which account are you logging into?",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -54,7 +56,7 @@ class SwitchLoginScreen extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 54,
             ),
 
@@ -66,7 +68,7 @@ class SwitchLoginScreen extends StatelessWidget {
                     onTap: () {
                       navigateTo(
                         context,
-                        LoginScreen(),
+                        const LoginScreen(),
                       );
                     },
                     child: Container(
@@ -75,7 +77,7 @@ class SwitchLoginScreen extends StatelessWidget {
                           border: Border.all(
                             color: kDefaultButtonColor,
                           ),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurStyle: BlurStyle.outer,
                               color: kDefaultButtonColor,
@@ -83,10 +85,10 @@ class SwitchLoginScreen extends StatelessWidget {
                               blurRadius: 0.4,
                             )
                           ]),
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Row(
                         children: [
-                          Text(
+                          const Text(
                             'User Account',
                             style: TextStyle(
                               fontSize: 14.0,
@@ -94,7 +96,7 @@ class SwitchLoginScreen extends StatelessWidget {
                               color: kDefaultButtonColor,
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           SvgPicture.asset(
                             "assets/images/arrow-right.svg",
                           ),
@@ -102,14 +104,14 @@ class SwitchLoginScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 32,
                   ),
                   InkWell(
                     onTap: () {
                       navigateTo(
                         context,
-                        ChildLoginScreen(),
+                        const ChildLoginScreen(),
                       );
                     },
                     child: Container(
@@ -118,7 +120,7 @@ class SwitchLoginScreen extends StatelessWidget {
                         border: Border.all(
                           color: kChildLoginScreenColor,
                         ),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                             blurStyle: BlurStyle.outer,
                             color: kChildLoginScreenColor,
@@ -127,10 +129,10 @@ class SwitchLoginScreen extends StatelessWidget {
                           )
                         ],
                       ),
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Row(
                         children: [
-                          Text(
+                          const Text(
                             'Child Account 🧒',
                             style: TextStyle(
                               fontSize: 14.0,
@@ -138,7 +140,7 @@ class SwitchLoginScreen extends StatelessWidget {
                               color: kChildLoginScreenColor,
                             ),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           SvgPicture.asset(
                             "assets/images/arrow-right.svg",
                             color:kChildLoginScreenColor,

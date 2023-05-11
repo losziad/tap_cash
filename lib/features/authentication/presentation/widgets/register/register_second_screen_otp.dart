@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:linear_step_indicator/linear_step_indicator.dart';
 import 'package:tab_cash/core/utils/constants.dart';
-import 'package:tab_cash/features/authentication/presentation/manger/otp_cubit/otp_cubit.dart';
-import 'package:tab_cash/features/authentication/presentation/manger/register_cubit/register_cubit.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/otp_items/build_phone_verification_bloc.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/otp_items/build_pin_code_fields.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_items/app_bar_sign_up_screen.dart';
@@ -17,26 +14,22 @@ class RegisterSecondScreenOTP extends StatelessWidget {
   late String otpCode = '';
 
 
-   void _login(BuildContext context) {
-     BlocProvider.of<OTPCubit>(context).submitOTP(otpCode);
-   }
 
    @override
   Widget build(BuildContext context) {
    // BlocProvider.of<OTPCubit>(context).submitOTP(otpCode);
 
-    var cubit = RegisterCubit.get(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       appBar: appBarSignUpScreen(context),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           tapCashItemsAppBar(),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           LinearStepIndicator(
@@ -49,24 +42,24 @@ class RegisterSecondScreenOTP extends StatelessWidget {
               return Future.value(true);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           myDivider(),
-          SizedBox(
+          const SizedBox(
             height: 15.0,
           ),
 
           Expanded
             (
               child:SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Center(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
+                      const Padding(
+                        padding: EdgeInsets.symmetric(
                           horizontal: 22.0,
                         ),
                         child: Text(
@@ -78,11 +71,11 @@ class RegisterSecondScreenOTP extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20.0,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
+                      const Padding(
+                        padding: EdgeInsets.symmetric(
                           horizontal: 16.0,
                         ),
                         child: Text(
@@ -93,23 +86,23 @@ class RegisterSecondScreenOTP extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.symmetric(horizontal: 32, vertical: 40),
+                        margin: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
                         child: Column(
                           children: [
                             buildPinCodeFields(context),
-                            SizedBox(
+                            const SizedBox(
                               height: 20.0,
                             ),
                             buildPhoneVerificationBloc(),
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20.0,
                       ),
                       Center(
                         child: RichText(
-                            text: TextSpan(
+                            text: const TextSpan(
                               text: 'Didn\'t get a code?',
                               style: TextStyle(
                                 color: Colors.black,
@@ -127,7 +120,7 @@ class RegisterSecondScreenOTP extends StatelessWidget {
                             ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 100.0,
                       ),
                       Center(
@@ -137,7 +130,7 @@ class RegisterSecondScreenOTP extends StatelessWidget {
                           function: ()
                           {
 
-                            navigateToAndReplace(context, RegisterThirdScreen());
+                            navigateToAndReplace(context, const RegisterThirdScreen());
                           },
                           color: kDefaultButtonColor,
                         ),

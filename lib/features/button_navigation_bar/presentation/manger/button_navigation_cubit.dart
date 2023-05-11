@@ -20,7 +20,7 @@ class ButtonNavigationCubit extends Cubit<ButtonNavigationStates>
     emit(ChangeHomeScreenState());
   }
 
-  List<Widget> screens=[
+  List<Widget?> screens=[
     HomePageScreen(),
     ProfileScreen(),
   ];

@@ -1,4 +1,3 @@
-import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:linear_step_indicator/linear_step_indicator.dart';
@@ -6,10 +5,8 @@ import 'package:tab_cash/core/utils/constants.dart';
 import 'package:tab_cash/features/authentication/presentation/manger/otp_cubit/otp_cubit.dart';
 import 'package:tab_cash/features/authentication/presentation/manger/register_cubit/register_cubit.dart';
 import 'package:tab_cash/features/authentication/presentation/manger/register_cubit/register_states.dart';
-import 'package:tab_cash/features/authentication/presentation/widgets/register/otp_items/build_phone_verification_bloc.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/otp_items/show_progress_indicator.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_items/app_bar_sign_up_screen.dart';
-import 'package:tab_cash/features/authentication/presentation/widgets/register/register_items/body_sign_up_first_screen.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_items/description_tap_cash.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_items/require_password_text.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_items/tap_cash_items_app_bar.dart';
@@ -24,7 +21,6 @@ class RegisterFirstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var cubit = RegisterCubit.get(context);
 
-    late String otpCode;
 
     // void verfiyOTP(BuildContext context) {
     //   BlocProvider.of<OTPCubit>(context).submitOTP(otpCode);
@@ -51,7 +47,7 @@ class RegisterFirstScreen extends StatelessWidget {
             String errorMsg = (state).errorMsg;
             ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(errorMsg),
               backgroundColor: Colors.black,
-              duration: Duration(seconds: 3),
+              duration: const Duration(seconds: 3),
             ),);
           }
         },
@@ -80,11 +76,11 @@ class RegisterFirstScreen extends StatelessWidget {
           appBar: appBarSignUpScreen(context),
           body: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 8.0,
               ),
               tapCashItemsAppBar(),
-              SizedBox(
+              const SizedBox(
                 height: 8.0,
               ),
               LinearStepIndicator(
@@ -98,17 +94,17 @@ class RegisterFirstScreen extends StatelessWidget {
                   return Future.value(true);
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8.0,
               ),
               myDivider(),
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
               ),
               // bodySignUpFirstScreen(context),
               Expanded(
                 child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   child: Form(
                     key: cubit.formKey,
                     child: Center(
@@ -120,7 +116,7 @@ class RegisterFirstScreen extends StatelessWidget {
                               horizontal: 18.0,
                             ),
                             child: Row(
-                              children: [
+                              children: const [
                                 Text(
                                   'Let\'s get to know you',
                                   textAlign: TextAlign.start,
@@ -129,7 +125,7 @@ class RegisterFirstScreen extends StatelessWidget {
                               ],
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30.0,
                           ),
                           Padding(
@@ -137,13 +133,13 @@ class RegisterFirstScreen extends StatelessWidget {
                             child: Column(
                               children: [
                                 Row(
-                                  children: [
+                                  children: const [
                                     Text(
                                       'Your legal first name',
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 6.0,
                                 ),
                                 defaultTextFormField(
@@ -157,17 +153,17 @@ class RegisterFirstScreen extends StatelessWidget {
                                   controller: cubit.firstNameController,
                                   keyboardType: TextInputType.text,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Text(
                                       'Your legal last name',
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 6.0,
                                 ),
                                 defaultTextFormField(
@@ -181,17 +177,17 @@ class RegisterFirstScreen extends StatelessWidget {
                                   controller: cubit.lastNameController,
                                   keyboardType: TextInputType.text,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Text(
                                       'Email Address',
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 6.0,
                                 ),
                                 defaultTextFormField(
@@ -205,17 +201,17 @@ class RegisterFirstScreen extends StatelessWidget {
                                   controller: cubit.emailController,
                                   keyboardType: TextInputType.emailAddress,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Text(
                                       'Mobile number',
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 6.0,
                                 ),
                                 defaultTextFormField(
@@ -229,17 +225,17 @@ class RegisterFirstScreen extends StatelessWidget {
                                   controller: cubit.phoneController,
                                   keyboardType: TextInputType.number,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Text(
                                       'Your user name',
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 6.0,
                                 ),
                                 defaultTextFormField(
@@ -253,17 +249,17 @@ class RegisterFirstScreen extends StatelessWidget {
                                   controller: cubit.userNameController,
                                   keyboardType: TextInputType.name,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Text(
                                       'Password',
                                     ),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 6.0,
                                 ),
                                 defaultTextFormField(
@@ -280,7 +276,7 @@ class RegisterFirstScreen extends StatelessWidget {
                                   suffix: cubit.suffix,
                                   isPassword: cubit.isPassword,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5.0,
                                 ),
                                 Row(
@@ -288,7 +284,7 @@ class RegisterFirstScreen extends StatelessWidget {
                                     requiredPasswordText(),
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 55.0,
                                 ),
                                 state is! LoadingRegisterState
@@ -318,7 +314,7 @@ class RegisterFirstScreen extends StatelessWidget {
                                 )
                                     : const Center(
                                         child: CircularProgressIndicator()),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20.0,
                                 ),
                                 Container(
@@ -328,8 +324,9 @@ class RegisterFirstScreen extends StatelessWidget {
                                     color: kContainerSignUpColor,
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(15.0),
+                                  child:
+                                  const Padding(
+                                    padding: EdgeInsets.all(15.0),
                                     child: Text(
                                       '88% of parents said their children are more money confident since using Tap Cash',
                                       style: TextStyle(
@@ -339,7 +336,7 @@ class RegisterFirstScreen extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 25.0,
                                 ),
                                 descriptionTapCash(),

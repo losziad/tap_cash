@@ -6,7 +6,6 @@ import 'package:tab_cash/features/authentication/presentation/manger/login_cubit
 import 'package:tab_cash/features/authentication/presentation/manger/login_cubit/login_states.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_first_screen.dart';
 import 'package:tab_cash/features/button_navigation_bar/presentation/widgets/button_naigation_bar.dart';
-import 'package:tab_cash/features/home_page_screen/home_page_screen.dart';
 import 'package:tab_cash/shared/components/components.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -20,7 +19,7 @@ class LoginScreen extends StatelessWidget {
     return BlocConsumer<LoginCubit, LoginStates>(
       listener: (context, state) {
         if (state is SuccessLoginState && state.userModel.status == true) {
-          navigateToAndReplace(context, HomeLayoutScreen());
+          navigateToAndReplace(context, const HomeLayoutScreen());
 
         } else if (state is SuccessLoginState &&
             state.userModel.status == false) {
@@ -48,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                         top: 250,
                         child: Container(
                           width: size.width,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(30.0),
@@ -59,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                             key: cubit.formKey,
                             child: Column(
                               children: [
-                                SizedBox(
+                                const SizedBox(
                                   height: 16,
                                 ),
                                 Padding(
@@ -67,13 +66,13 @@ class LoginScreen extends StatelessWidget {
                                       horizontal: 8.0),
                                   child: Row(
                                     children: [
-                                      Icon(Icons.arrow_back_sharp),
-                                      Spacer(),
+                                      const Icon(Icons.arrow_back_sharp),
+                                      const Spacer(),
                                       SvgPicture.asset(
                                           "assets/images/login tap cash.svg",
 
                                       ),
-                                      Spacer(),
+                                      const Spacer(),
                                     ],
                                   ),
                                 ),
@@ -84,7 +83,7 @@ class LoginScreen extends StatelessWidget {
                                     bottom: 32.0,
                                   ),
                                   child: Row(
-                                    children: [
+                                    children: const [
                                       Text(
                                         "Hi 👋 let's log in",
                                           style: TextStyle(
@@ -103,14 +102,14 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25.0,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
                         child: Text(
                           "ُEmail Address",
                             style:TextStyle(
@@ -119,7 +118,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6.0,
                       ),
                       Padding(
@@ -127,8 +126,9 @@ class LoginScreen extends StatelessWidget {
                         child: defaultTextFormField(
                             controller: cubit.emailController,
                             validate: (value) {
-                              if (value == null || value.isEmpty)
+                              if (value == null || value.isEmpty) {
                                 return "Required Field..!";
+                              }
                             },
                             text: "   Enter your email address",
                             keyboardType: TextInputType.emailAddress,
@@ -139,15 +139,15 @@ class LoginScreen extends StatelessWidget {
                   // paswsword
 
                   // email address
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
 
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
                         child: Text(
                           "Password",
                             style:TextStyle(
@@ -156,7 +156,7 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6.0,
                       ),
                       Padding(
@@ -165,8 +165,9 @@ class LoginScreen extends StatelessWidget {
                         child: defaultTextFormField(
                           controller: cubit.passwordController,
                           validate: (value) {
-                            if (value!.isEmpty)
+                            if (value!.isEmpty) {
                               return "Required Field..!";
+                            }
                           },
                           text: "   Enter your password",
                           keyboardType: TextInputType.visiblePassword,
@@ -176,7 +177,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Padding(
@@ -185,14 +186,14 @@ class LoginScreen extends StatelessWidget {
                       children: [
                         TextButton(
                             onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             "Forget password?",
                         ),
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
                   defaultButton(
@@ -208,7 +209,8 @@ class LoginScreen extends StatelessWidget {
                       text: "Login",
                     textColor: Colors.white,
                   ),
-                  SizedBox(
+
+                  const SizedBox(
                     height: 10,
                   ),
 
@@ -217,13 +219,13 @@ class LoginScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("You Dont't have an account?"),
+                        const Text("You Dont't have an account?"),
                         TextButton(
                             onPressed: ()
                             {
-                              navigateTo(context, RegisterFirstScreen(),);
+                              navigateTo(context, const RegisterFirstScreen(),);
                             },
-                            child: Text(
+                            child: const Text(
                               "Sign up",
                               style: TextStyle(
                                   fontSize: 16,

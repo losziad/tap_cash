@@ -24,11 +24,11 @@ class RegisterFourthScreen extends StatelessWidget {
         appBar: appBarSignUpScreen(context),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           tapCashItemsAppBar(),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           LinearStepIndicator(
@@ -41,16 +41,16 @@ class RegisterFourthScreen extends StatelessWidget {
               return Future.value(true);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           myDivider(),
-          SizedBox(
+          const SizedBox(
             height: 15.0,
           ),
           Expanded(
             child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               child: Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,7 +60,7 @@ class RegisterFourthScreen extends StatelessWidget {
                         horizontal: 18.0,
                       ),
                       child: Row(
-                        children: [
+                        children: const [
                           Text(
                             'Verify your identity',
                             textAlign: TextAlign.start,
@@ -69,11 +69,11 @@ class RegisterFourthScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
+                    const Padding(
+                      padding: EdgeInsets.symmetric(
                         horizontal: 18.0,
                       ),
                       child: Text(
@@ -83,7 +83,7 @@ class RegisterFourthScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30.0,
                     ),
                     Padding(
@@ -91,13 +91,13 @@ class RegisterFourthScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Row(
-                            children: [
+                            children: const [
                               Text(
                                 'Your National ID number',
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 6.0,
                           ),
                           defaultTextFormField(
@@ -106,32 +106,32 @@ class RegisterFourthScreen extends StatelessWidget {
                             controller: nationalIDController,
                             keyboardType: TextInputType.name,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20.0,
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Text(
                                 'Your National ID photo',
                               ),
                             ],
                           ),
-                            SizedBox(
+                            const SizedBox(
                               height: 16.0,
                             ),
                             Row(
                               children: [
-                                Icon(
+                                const Icon(
                                 Icons.cloud_upload,
                                  color: Colors.blue,
                                 size: 40.0,
                                    ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 6.0,
                                 ),
                                 TextButton(
                                   onPressed: (){},
-                                  child: Text(
+                                  child: const Text(
                                     'Upload National ID Photo',
                                     style: TextStyle(
                                       fontSize: 20.0,
@@ -141,11 +141,11 @@ class RegisterFourthScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          SizedBox(
+                          const SizedBox(
                             height: 36.0,
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Text(
                                 'Terms and conditions',
                                 textAlign: TextAlign.start,
@@ -153,20 +153,21 @@ class RegisterFourthScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30.0,
                           ),
                           Row(
                             children: [
                               Checkbox(value: check, onChanged: (value){},),
-                              Text(
+                              const Text(
                                 'Get the Tap Cash newsletters, offers and '
                                     'updates',
                               ),
                             ],
                           ),
                           TermsAndConditionsTextAndCheckBox(check: check),
-                          SizedBox(
+
+                          const SizedBox(
                             height: 50.0,
                           ),
                           defaultButton(
@@ -174,15 +175,15 @@ class RegisterFourthScreen extends StatelessWidget {
                             textColor: Colors.white,
                             function: ()
                             {
-                             navigateTo(context, RegisterFifthScreen());
+                             navigateTo(context, const RegisterFifthScreen());
                             },
                             color: kDefaultButtonColor,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20.0,
                           ),
                           feedbackMember(),
-                          SizedBox(
+                          const SizedBox(
                             height: 25.0,
                           ),
                           descriptionTapCash(),

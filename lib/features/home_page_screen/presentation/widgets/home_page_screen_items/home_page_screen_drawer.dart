@@ -5,6 +5,7 @@ import 'package:tab_cash/features/home_page_screen/presentation/widgets/home_pag
 import 'package:tab_cash/features/home_page_screen/presentation/widgets/home_page_screen_items/header_gesture_drawer_item.dart';
 import 'package:tab_cash/features/home_page_screen/presentation/widgets/home_page_screen_items/inkwell_drawer_item.dart';
 import 'package:tab_cash/features/profile/presentation/widgets/profile_screen.dart';
+import 'package:tab_cash/features/smart_credit_visa/presentation/widgets/online_card_first_screen.dart';
 import 'package:tab_cash/features/smart_wallet/presentation/widgets/add_to_wallet/add_to_wallet.dart';
 import 'package:tab_cash/features/smart_wallet/presentation/widgets/services/education_service_screen.dart';
 import 'package:tab_cash/features/smart_wallet/presentation/widgets/services/services.dart';
@@ -104,7 +105,10 @@ Drawer buildDrawer(BuildContext context) {
                   ),
                   GestureDetectorDrawerItems(
                     textTitle: 'Online Card',
-                    function: (){},
+                    function: ()
+                    {
+                      navigateTo(context, OnlineCard(),);
+                    },
                     imageForCard: 'onlineCardD.png',
                   ),
                   SizedBox(

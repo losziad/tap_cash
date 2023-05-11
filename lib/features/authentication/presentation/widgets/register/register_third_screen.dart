@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:linear_step_indicator/linear_step_indicator.dart';
 import 'package:tab_cash/core/utils/constants.dart';
-import 'package:tab_cash/features/authentication/presentation/widgets/register/register_first_screen.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_items/app_bar_sign_up_screen.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_items/description_tap_cash.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_items/feedback_member.dart';
@@ -29,11 +28,11 @@ class RegisterThirdScreen extends StatelessWidget {
       appBar: appBarSignUpScreen(context),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           tapCashItemsAppBar(),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           LinearStepIndicator(
@@ -46,16 +45,16 @@ class RegisterThirdScreen extends StatelessWidget {
               return Future.value(true);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 8.0,
           ),
           myDivider(),
-          SizedBox(
+          const SizedBox(
             height: 15.0,
           ),
       Expanded(
         child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,24 +67,24 @@ class RegisterThirdScreen extends StatelessWidget {
                     textBaseline: TextBaseline.alphabetic,
                     crossAxisAlignment: CrossAxisAlignment.baseline,
                     children: [
-                      Text(
+                      const Text(
                         'Enter child details',
                         textAlign: TextAlign.start,
                         style: kTextStyleHeader,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 91.0,
                       ),
                       TextButton(
-                        child: Text('SKIP'),
+                        child: const Text('SKIP'),
                         onPressed: () {
-                          navigateTo(context, RegisterFourthScreen());
+                          navigateTo(context, const RegisterFourthScreen());
                         },
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30.0,
                 ),
                 Padding(
@@ -93,13 +92,13 @@ class RegisterThirdScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Text(
                             'Child\'s first name',
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6.0,
                       ),
                       defaultTextFormField(
@@ -108,17 +107,17 @@ class RegisterThirdScreen extends StatelessWidget {
                         controller: firstNameController,
                         keyboardType: TextInputType.name,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Text(
                             'Child\'s last name',
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6.0,
                       ),
                       defaultTextFormField(
@@ -127,17 +126,17 @@ class RegisterThirdScreen extends StatelessWidget {
                         controller: lastNameController,
                         keyboardType: TextInputType.name,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Text(
                             'Child\'s date of birth',
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6.0,
                       ),
                       defaultTextFormField(
@@ -146,17 +145,17 @@ class RegisterThirdScreen extends StatelessWidget {
                         controller: phoneController,
                         keyboardType: TextInputType.number,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Text(
                             'Child\'s Password',
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 6.0,
                       ),
                       defaultTextFormField(
@@ -166,7 +165,7 @@ class RegisterThirdScreen extends StatelessWidget {
                         keyboardType: TextInputType.visiblePassword,
                         prefix: Icons.visibility_outlined,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5.0,
                       ),
                       Row(
@@ -174,7 +173,7 @@ class RegisterThirdScreen extends StatelessWidget {
                           requiredPasswordText(),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 55.0,
                       ),
                       defaultButton(
@@ -182,11 +181,11 @@ class RegisterThirdScreen extends StatelessWidget {
                         textColor: Colors.white,
                         function: ()
                         {
-                         navigateTo(context, RegisterFourthScreen());
+                         navigateTo(context, const RegisterFourthScreen());
                         },
                         color: kDefaultButtonColor,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       defaultButton(
@@ -198,11 +197,11 @@ class RegisterThirdScreen extends StatelessWidget {
                         textColor: kDefaultButtonColor,
                         color: Colors.white,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20.0,
                       ),
                       feedbackMember(),
-                      SizedBox(
+                      const SizedBox(
                         height: 25.0,
                       ),
                       descriptionTapCash(),

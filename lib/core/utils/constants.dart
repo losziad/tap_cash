@@ -108,6 +108,30 @@ final kDecoration = BoxDecoration(
   ],
 );
 
+final kDecorationOnlineCard = BoxDecoration(
+  gradient: LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: <Color>[
+      Color(0xff9327F0),
+      Color(0xff9327F0),
+      Color(0xff9327F0),
+      Color(0xff9327F0),
+      Color(0xff320DAF),
+    ],
+    tileMode: TileMode.mirror,
+  ),
+  color: Colors.white,
+  borderRadius: BorderRadius.circular(15.0),
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey,
+      offset: Offset(0.0, 1.0),
+      blurRadius: 10.0,
+    ),
+  ],
+);
+
 final kDecorationServices = BoxDecoration(
   borderRadius: BorderRadius.circular(10),
   boxShadow: [
