@@ -90,14 +90,19 @@ class OnlineCardSecondScreen extends StatelessWidget {
                                   money: cubit.balanceController.text,
                                 );
                               }
-                              navigateTo(
-                                context,
-                                OnlineCardThirdScreen(),
-                              );
+                              // navigateTo(
+                              //   context,
+                              //   OnlineCardThirdScreen(),
+                              // );
                             },
                             text: 'Generate New Card',
                             textColor: Colors.white,
                           ),
+                          SizedBox(
+                            height: 15.0,
+                          ),
+                          if (state is OnlineCardLoadingState)
+                            const Center(child: CircularProgressIndicator()),
                         ],
                       ),
                     ),
@@ -109,10 +114,10 @@ class OnlineCardSecondScreen extends StatelessWidget {
         );
       },
       listener: (context, state) {
-        if (state is SuccessLoginState) {
+        if (state is OnlineCardSuccessState) {
           showToast(text: 'Success', color: Colors.green);
-          navigateToAndReplace(context, OnlineCardThirdScreen());
-        } else if (state is SuccessLoginState) {
+          navigateTo(context, OnlineCardThirdScreen());
+        } else if (state is OnlineCardErrorState) {
           showToast(text: "wrong email or password", color: Colors.red);
         }
         if (state is ErrorLoginState) {

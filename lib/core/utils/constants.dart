@@ -7,7 +7,6 @@ const kAppBarSignUp = TextStyle(
   color: Colors.black,
 );
 
-
 const kIconLockSignUp = Icon(
   Icons.lock_outline_sharp,
   color: Colors.black,
@@ -27,7 +26,6 @@ const kTextStyleHeader = TextStyle(
   fontSize: 25.0,
 );
 
-
 const kHomePageScreenBackGroundColor = BoxDecoration(
   gradient: LinearGradient(
     begin: Alignment.topLeft,
@@ -46,16 +44,11 @@ const kHomePageScreenBackGroundColor = BoxDecoration(
   ),
 );
 
-
 //FOR CUBIT
 String? userId;
 String? userCardNumber;
 String? token;
 UserGetterModel? user;
-
-
-
-
 
 //COLORS
 const kDefaultButtonColor = Color(0xFF263699);
@@ -72,8 +65,6 @@ const kServiceDefaultColor = Color(0xFF98A1B3);
 
 const kServiceEducationColor = Color(0xFF666E80);
 
-
-
 const kTitleStyle = TextStyle(
   fontSize: 18.0,
 );
@@ -82,27 +73,24 @@ const kTitleStyleSmall = TextStyle(
   fontSize: 12.0,
 );
 
-const kTitleStyleDrawerTextHeader = TextStyle(
-    fontWeight: FontWeight.w500,
-    fontSize: 16.0
-);
+const kTitleStyleDrawerTextHeader =
+    TextStyle(fontWeight: FontWeight.w500, fontSize: 16.0);
 
-const kTitleStyleDrawerText = TextStyle(
-    fontSize: 16.0
-);
+const kTitleStyleDrawerText = TextStyle(fontSize: 16.0);
 
 const kFontSizeDrawer = TextStyle(
   fontSize: 16.0,
 );
 
-
 final kDecoration = BoxDecoration(
-  borderRadius:  BorderRadius.circular(10.0,),
+  borderRadius: BorderRadius.circular(
+    10.0,
+  ),
   color: Colors.white,
   boxShadow: [
     BoxShadow(
       color: Colors.grey,
-      offset: Offset(0.0,1.0),
+      offset: Offset(0.0, 1.0),
       blurRadius: 10.0,
     ),
   ],
@@ -145,12 +133,12 @@ final kDecorationServices = BoxDecoration(
 
 const String kBaseImage = 'assets/images/';
 
-const kTextDialog =  TextStyle(
+const kTextDialog = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 20.0,
 );
 
-const kTextOrder =  TextStyle(
+const kTextOrder = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 18.0,
 );
@@ -173,6 +161,3 @@ const kStyleAppBar = TextStyle(
 
 //This String to Cache Helper
 String? uId = '';
-
-
-

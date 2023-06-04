@@ -113,6 +113,7 @@ class HomePageScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Row(
                             children: [
@@ -125,6 +126,10 @@ class HomePageScreen extends StatelessWidget {
                               ),
                             ],
                           ),
+                          Image.asset('assets/images/chart.png',
+                          height: 160.0,
+                            width: 350.0,
+                          )
                         ],
                       ),
                     ),
@@ -139,7 +144,8 @@ class HomePageScreen extends StatelessWidget {
                           HomePageOneCard(
                             textTitle: 'Children\'s Wallet',
                             function: () {},
-                            imageForCard: 'childrenWallet.png',
+                            //childrenWallet
+                            imageForCard: 'newChild.png',
                           ),
                         ],
                       ),
@@ -151,7 +157,7 @@ class HomePageScreen extends StatelessWidget {
                           HomePageOneCard(
                             textTitle: 'View Transactions',
                             function: () {},
-                            imageForCard: 'view.png',
+                            imageForCard: 'newTransaction.png',
                           ),
                         ],
                       ),
@@ -169,7 +175,7 @@ class HomePageScreen extends StatelessWidget {
                             function: () {
                               navigateTo(context, TransferMoneyScreen());
                             },
-                            imageForCard: 'sendMoney.png',
+                            imageForCard: 'newSendMoney.png',
                           ),
                         ],
                       ),
@@ -181,7 +187,7 @@ class HomePageScreen extends StatelessWidget {
                           HomePageOneCardSmallSize(
                             textTitle: 'Purchase',
                             function: () {},
-                            imageForCard: 'purchase.png',
+                            imageForCard: 'newPurchase.png',
                           ),
                         ],
                       ),
@@ -193,7 +199,7 @@ class HomePageScreen extends StatelessWidget {
                           HomePageOneCardSmallSize(
                             textTitle: 'Withdraw',
                             function: () {},
-                            imageForCard: 'withdraw.png',
+                            imageForCard: 'newWithdraw.png',
                           ),
                         ],
                       ),
@@ -211,7 +217,7 @@ class HomePageScreen extends StatelessWidget {
                             function: () {
                               navigateTo(context, AddToWalletScreen());
                             },
-                            imageForCard: 'loadMoney.png',
+                            imageForCard: 'newLoadMoney.png',
                           ),
                         ],
                       ),
@@ -225,7 +231,7 @@ class HomePageScreen extends StatelessWidget {
                             function: () {
                               navigateTo(context, ServicesScreen());
                             },
-                            imageForCard: 'services.png',
+                            imageForCard: 'newServices.png',
                           ),
                         ],
                       ),
@@ -240,7 +246,7 @@ class HomePageScreen extends StatelessWidget {
                             {
                               navigateTo(context, OnlineCard(),);
                             },
-                            imageForCard: 'onlineCard.png',
+                            imageForCard: 'newOnlineCard.png',
                           ),
                         ],
                       ),

@@ -85,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                                   child: Row(
                                     children: const [
                                       Text(
-                                        "Hi 👋 let's log in",
+                                        "Hi 👋 let's login",
                                           style: TextStyle(
                                             fontSize: 24.0,
                                             fontWeight: FontWeight.w700,

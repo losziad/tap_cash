@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tab_cash/core/utils/constants.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/home/home_authentication_screen.dart';
-import 'package:tab_cash/features/profile/presentation/widgets/profile_inkwell.dart';
+import 'package:tab_cash/features/profile/presentation/widgets/profile_items/profile_inkwell.dart';
 import 'package:tab_cash/shared/components/components.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -56,12 +56,26 @@ class ProfileScreen extends StatelessWidget {
                                SizedBox(
                                  height: 10.0,
                                ),
-                               Text(
-                                '${user!.firstName}',
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                ),
-                              ),
+                               Row(
+                                 mainAxisAlignment: MainAxisAlignment.center,
+                                 children: [
+                                   Text(
+                                     '${user!.firstName}',
+                                     style: TextStyle(
+                                       fontSize: 18.0,
+                                     ),
+                                   ),
+                                   SizedBox(
+                                     width: 5.0,
+                                   ),
+                                   Text(
+                                     '${user!.lastName}',
+                                     style: TextStyle(
+                                       fontSize: 18.0,
+                                     ),
+                                   ),
+                                 ],
+                               ),
                               SizedBox(
                                 height: 5.0,
                               ),

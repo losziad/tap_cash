@@ -108,12 +108,26 @@ class OnlineCardThirdScreen extends StatelessWidget {
                               ),
                             ),
                             Spacer(),
-                            Text(
-                              'Valid Until',
-                              style: TextStyle(
-                                fontSize: 12.0,
-                                color: Colors.grey,
-                              ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  'Valid Until',
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Colors.grey,
+                                  ),
+
+                                ),
+                                Text(
+                                  '05/25',
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    color: Colors.grey,
+                                  ),
+
+                                ),
+                              ],
                             ),
                             SvgPicture.asset(
                               'assets/images/EMV Chip.svg',
