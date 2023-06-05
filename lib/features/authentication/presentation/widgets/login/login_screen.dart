@@ -5,6 +5,7 @@ import 'package:tab_cash/core/utils/constants.dart';
 import 'package:tab_cash/features/authentication/presentation/manger/login_cubit/login_cubit.dart';
 import 'package:tab_cash/features/authentication/presentation/manger/login_cubit/login_states.dart';
 import 'package:tab_cash/features/authentication/presentation/widgets/register/register_first_screen.dart';
+import 'package:tab_cash/features/authentication/presentation/widgets/rest_password/rest_password_first_screen.dart';
 import 'package:tab_cash/features/button_navigation_bar/presentation/widgets/button_naigation_bar.dart';
 import 'package:tab_cash/shared/components/components.dart';
 
@@ -185,7 +186,10 @@ class LoginScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         TextButton(
-                            onPressed: () {},
+                            onPressed: ()
+                            {
+                              navigateTo(context, RestPasswordFirstScreen(),);
+                            },
                           child: const Text(
                             "Forget password?",
                         ),
